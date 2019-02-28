@@ -1,7 +1,7 @@
 # FBLA-Coding-and-Programming
 FBLA 2019 Coding and Programming
 
-This is my submission for the 2019 FBLA Coding and Programming event.
+This is my submission for the 2019 FBLA Coding and Programming event. To run the project, place all the project files in the webpage root of the server. THE SERVER MUST BE ABLE TO RUN PHP FOR THE PROGRAM TO WORK.
 
 Overview:
 
