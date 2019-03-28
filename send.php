@@ -32,7 +32,7 @@ if($_POST['used?'] == "yes" or $_POST['used?'] == "no"){ #the used column can on
 			
 		}else{
 
-		$file = fopen("test.csv", "w") or die("ERROR"); #if all those conditions are met, the csv file is opened and written into to save the changes
+		$file = fopen("test.csv", "w") or die("ERRORORORORORORORO"); #if all those conditions are met, the csv file is opened and written into to save the changes
 		echo "Sending Information...<br><br>";
 		foreach ($get as $line){
 			fputcsv($file, $line);
@@ -40,7 +40,7 @@ if($_POST['used?'] == "yes" or $_POST['used?'] == "no"){ #the used column can on
 
 		fclose($file);
 		echo "Information sent successfully!";
-		header("Location: index.html");
+		header("Location: index.php");
 		exit(); 
 	}
 	}else{

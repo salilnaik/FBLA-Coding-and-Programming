@@ -134,8 +134,8 @@ button{
 </tr>
 </tbody>
 </table><br>
-<input type="submit" id="submit" name="submit">
-<button id="back" onclick="window.location.href='index.html'">Back</button>
+<input type="submit" id="submit" name="submit" value="Submit">
+<button id="back" onclick="window.location.href='index.php'">Back</button>
 </form>
 
 <?php
@@ -167,7 +167,7 @@ function send($form){
 
 				fclose($file);
 				echo "Information sent successfully!";
-				header("Location: index.html");
+				header("Location: index.php");
 				exit(); 
 				
 			}else{

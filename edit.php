@@ -172,7 +172,7 @@ fclose($file);
 </table><br>
 <input id="submit" id="submit" type="submit">
 <input id="reset" id="reset" type="reset">
-<button onclick="window.location.href='index.html'">Cancel</button>
+<button onclick="window.location.href='index.php'">Cancel</button>
 </form><br>
 
 

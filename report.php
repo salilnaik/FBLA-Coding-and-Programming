@@ -149,7 +149,7 @@ fclose($myfile);
   </tbody>
 </table>
 <?php endif; ?><br><br>
-<button onclick="window.location.href='index.html'">Back</button><br><br><br>
+<button onclick="window.location.href='index.php'">Back</button><br><br><br>
 
 
 <div class="help" style="width:20px;height:2px;">

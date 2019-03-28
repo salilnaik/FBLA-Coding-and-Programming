@@ -1,34 +1,12 @@
 <html>
 <head>
+<title>Home</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <style>
-table, th, td {
-  border: 2px solid black;
-  border-collapse: collapse;
+h1 {
+	color: #ff3f3f;
 }
-th, td{
-	padding: 5px;
-}
-button{
-	border:none;
-	background-color:grey;
-	padding: 10px;
-	color:#eeeeee;
-	cursor:pointer;
-}
-#submit, select{
-	border:none;
-	background-color:#0caaff;
-	padding: 10px;
-	color:#eeeeee;
-	cursor:pointer;
-}
-option{
-	background-color:#35caf4;
-}
-
-
 
 .material-icons{
 	color:black;
@@ -38,7 +16,7 @@ option{
 
 .information{
 	position: absolute;
-	bottom: 72%;
+	bottom: 77%;
 	visibility: hidden;
 	font-size: 12px;
 	color: white;
@@ -65,7 +43,7 @@ option{
 	animation-duration: 0.4s;
 	font-size:18px;
 }
-#helpbox p{
+p{
 	padding:5px;
 }
 #helpheader{
@@ -129,40 +107,21 @@ option{
 #p1{display:block;}
 #p2{display:none;}
 #p3{display:none;}
+button{
+	border:none;
+	background-color:#0caaff;
+	padding: 10px;
+	color:#eeeeee;
+	cursor:pointer;
+}
 </style>
-<title>Choose a Student</title>
 </head>
 <body>
 <script>var x = 0</script>
-<?php
-
-$info = array();
-$myfile = fopen("test.csv", "r") or die("ERROR"); #opens data and reads it
-while(($end = fgetcsv($myfile)) !== FALSE){
-	array_push($info, $end); #writes data to an array
-}
-fclose($myfile);
-
-?>
-
-<p>Which student's information do you want to edit?</p>
-<form action="edit.php" method="post">
-<?php if (count($info) > 0): ?>
-<select id="select" name="names"> <!--  creates a dropdown list  -->
-<option value="x">Select a Name</option>
-<option value="x">------------</option>
-<?php 
-$x = -1;
-foreach ($info as $option): $x++ ?>
-<option id="option" value='<?php echo $x ?>'><?php echo $option[0]; ?></option> <!--  adds the names of all the students to the dropdown  -->
-<?php endforeach; ?>
-</select>
-<input type="submit" id="submit" value="Choose">
-</form>
-<button onclick="window.location.href='index.php'">Back</button><br><br><br>
-<?php endif; ?>
-
-
+<h1><strong>My Class</strong></h1>
+<button id="edit" onclick="window.location.href='choose.php'">Edit Students</button>
+<button id="new" onclick="window.location.href='new.php'">New Student</button>
+<button id="report" onclick="window.location.href='report.php'">Generate Report</button><br><br><br>
 <div class="help" style="width:20px;height:2px;">
 <i class="material-icons" onclick="show()">help</i>
 <span class="information">Help</span>
@@ -170,14 +129,14 @@ foreach ($info as $option): $x++ ?>
 <div id="blur">
 <div id="helpbox">
 <div id="helpheader">
-<h2 id="head1">Select a Name</h2>
-<h2 id="head2">Choose</h2>
-<h2 id="head3">Back</h2>
+<h2 id="head1">Edit Students</h2>
+<h2 id="head2">New Student</h2>
+<h2 id="head3">Generate Report</h2>
 <span class="next" id="next" onclick="next()">&#10148;</span>
 </div>
-<p id="p1">If you click on this drop-down list, you will see the names of all the students. You click on the name of the student whose information you want to edit.</p>
-<p id="p2">After you have chosen a student, you click on this button to select them and proceed to the next page.</p>
-<p id="p3">This button allows you to cancel the process of editing a student's information and will return you to the page you came from.</p>
+<p id="p1">This button takes you to a page with a drop-down list. You then choose the name of the student you want to edit. Once submitted, the next page will show you text boxes containing the student's current information where you can edit it.</p>
+<p id="p2">This button takes you to a page with text boxes to create a new student and enter their information into the database.</p>
+<p id="p3">This button will take you to a page with a table displaying all the information in the database. You can then proceed to print out the table for a paper copy of the records.</p>
 </div>
 </div>
 <script>
@@ -194,12 +153,13 @@ foreach ($info as $option): $x++ ?>
 		window.onclick = function(event) {
 			if (event.target == document.getElementById("blur")) {
 				document.getElementById("blur").style.display = "none";
+				
 			}
+			
 		}
 	}
 	function next(){
 		x++
-		console.log(x);
 		if(x == 1){
 			document.getElementById("p1").style.display = "none";
 			document.getElementById("head1").style.display = "none";
