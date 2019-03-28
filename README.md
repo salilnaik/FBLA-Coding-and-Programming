@@ -3,6 +3,10 @@ FBLA 2019 Coding and Programming
 
 This is my submission for the 2019 FBLA Coding and Programming event. To run the project, place all the project files in the webpage root of the server. THE SERVER MUST BE ABLE TO RUN PHP FOR THE PROGRAM TO WORK.
 
+--OR--
+
+Go to http://naiks.ddns.net to see the program in action.
+
 Overview:
 
 Topic: Develop a computer program to manage the issuance of e-books to a class of students. Give the class and e-book a name. The program must complete a minimum of the following tasks:
