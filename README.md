@@ -3,9 +3,8 @@ FBLA 2019 Coding and Programming
 
 This is my submission for the 2019 FBLA Coding and Programming event. To run the project, place all the project files in the webpage root of the server. THE SERVER MUST BE ABLE TO RUN PHP FOR THE PROGRAM TO WORK.
 
---OR--
-
-Go to http://naiks.ddns.net to see the program in action.
+Follow the instructions in this article. After installing everything necessary, download all the files in this project and place them in the htdocs folder. Open up a web browser and navigate to localhost.
+https://www.techwalla.com/articles/how-to-run-a-php-file-in-xampp
 
 Overview:
 
